@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>InitialLogin.qml</file>
+        <file>EnterAuthCode.qml</file>
+        <file>MainApplication.qml</file>
+        <file>StatusListItem.qml</file>
+    </qresource>
+</RCC>
