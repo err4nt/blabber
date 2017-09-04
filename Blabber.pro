@@ -33,12 +33,12 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../build-libmastodon-Desktop-Debug/release/ -llibmastodon
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../build-libmastodon-Desktop-Debug/debug/ -llibmastodon
-else:unix: LIBS += -L$$PWD/../build-libmastodon-Desktop-Debug/ -llibmastodon
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../build-qmastodon-Desktop-Debug/release/ -lqmastodon
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../build-qmastodon-Desktop-Debug/debug/ -lqmastodon
+else:unix: LIBS += -L$$PWD/../build-qmastodon-Desktop-Debug/ -lqmastodon
 
-INCLUDEPATH += $$PWD/../libmastodon
-DEPENDPATH += $$PWD/../build-libmastodon-Desktop-Debug
+INCLUDEPATH += $$PWD/../qmastodon
+DEPENDPATH += $$PWD/../build-qmastodon-Desktop-Debug
 
 HEADERS += \
     kwalletinterface.h
